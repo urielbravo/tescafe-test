@@ -1,0 +1,16 @@
+{
+  "name": "testcafe-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe edge ./tests",
+    "test:headless": "testcafe edge:headless ./tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^1.9.4"
+  }
+}
