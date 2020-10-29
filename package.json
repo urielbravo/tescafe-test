@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe edge ./tests",
+    "test:basic": "testcafe edge ./tests/basic.js",
+    "test:mercadolibre": "testcafe edge ./tests/mercadolibre.test.js",
+    "test:sauce": "testcafe edge ./tests/sauce.test.js",
     "test:headless": "testcafe edge:headless ./tests"
   },
   "keywords": [],

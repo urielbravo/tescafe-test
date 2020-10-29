@@ -8,7 +8,7 @@ fixture`Getting started with TestCafe`
     // await seedTestData()
   })
   .beforeEach(async (t) => {
-    await t.setTestSpeed(0.7);
+    await t.setTestSpeed(1);
   })
   .after(async (t) => {
     // cleaning test data
@@ -25,10 +25,10 @@ const easyEmbeddingCheckBox = Selector("#continuous-integration-embedding");
 const osRadioButton = Selector("#linux");
 const dropDownSelector = Selector("#preferred-interface");
 const dropDownOption = dropDownSelector.find("option");
-const tryTestCafe = Selector('#tried-test-cafe')
-const nineNumber = Selector('.slider-value').withText('9')
-const inputComment = Selector('#comments')
-// const slider = Selector('.ui-slider-handle .ui-corner-all .ui-state-default'); 
+const tryTestCafe = Selector("#tried-test-cafe");
+const nineNumber = Selector(".slider-value").withText("9");
+const inputComment = Selector("#comments");
+// const slider = Selector('.ui-slider-handle .ui-corner-all .ui-state-default');
 
 test("My first testcafe test", async (t) => {
   const articleText = Selector("#article-header").innerText;
@@ -42,8 +42,8 @@ test("My first testcafe test", async (t) => {
     .click(dropDownSelector)
     .click(dropDownOption.withText("Both"))
     .click(tryTestCafe)
-    .click(nineNumber, {offsetY: -25})
-    .typeText(inputComment, 'I love testcafe')
+    .click(nineNumber, { offsetY: -25 })
+    .typeText(inputComment, "I love testcafe")
     // .expect('.slider-value').eql(1)
     // .drag(slider, 360, 0, { offsetX: 10, offsetY: 10 })
     .click(submit_button)
