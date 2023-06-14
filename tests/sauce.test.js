@@ -11,7 +11,7 @@ const passwordInput = Selector("#password");
 const loginButton = Selector("#login-button");
 
 test("should be able to buy product", async (t) => {
-  const productsLabel = Selector(".product_label");
+  const inventoryContainer = Selector(".inventory_container");
   const backPackImage = Selector("a#item_4_img_link > img");
   const goBackButton = Selector("button.inventory_details_back_button");
   const addBagToCartButton = Selector("button.btn_inventory");
@@ -19,8 +19,8 @@ test("should be able to buy product", async (t) => {
 
   const addToCartButton = Selector("button.btn_primary.btn_inventory").nth(0);
   const cartButton = Selector("#shopping_cart_container");
-  const yourCartText = Selector("div.subheader").innerText;
-  const checkOutButton = Selector("a.checkout_button")
+  const yourCartText = Selector("div.header_secondary_container").innerText;
+  const checkOutButton = Selector("button").withAttribute('data-test', 'checkout')
   const continueButton = Selector("input.cart_button")
 
   // for fill
@@ -38,7 +38,7 @@ test("should be able to buy product", async (t) => {
     .typeText(userNameInput, "standard_user")
     .typeText(passwordInput, "secret_sauce")
     .click(loginButton)
-    .expect(productsLabel.exists)
+    .expect(inventoryContainer.exists)
     .ok()
     .click(backPackImage)
     .expect(goBackButton.exists)
@@ -47,7 +47,7 @@ test("should be able to buy product", async (t) => {
     .expect(removeItemButton.exists)
     .ok()
     .click(goBackButton)
-    .expect(productsLabel.exists)
+    .expect(inventoryContainer.exists)
     .ok()
     .click(addToCartButton)
     .expect(removeItemButton.exists)
@@ -65,5 +65,5 @@ test("should be able to buy product", async (t) => {
     .expect(finishButton.exists)
     .ok()
     .click(finishButton)
-    .expect(thankYouText).contains("THANK YOU FOR YOUR ORDER")
+    .expect(thankYouText).contains("Thank you for your order!")
 });
