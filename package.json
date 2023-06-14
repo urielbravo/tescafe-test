@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:basic": "testcafe edge ./tests/basic.js",
-    "test:mercadolibre": "testcafe edge ./tests/mercadolibre.test.js",
-    "test:sauce": "testcafe edge ./tests/sauce.test.js",
-    "test:headless": "testcafe edge:headless ./tests"
+    "test:basic": "testcafe chrome ./tests/basic.test.js",
+    "test:mercadolibre": "testcafe chrome ./tests/mercadolibre.test.js",
+    "test:sauce": "testcafe chrome ./tests/sauce.test.js",
+    "test:headless": "testcafe chrome:headless ./tests"
   },
   "keywords": [],
   "author": "",
