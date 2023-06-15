@@ -7,12 +7,12 @@
     "test:basic": "testcafe chrome ./tests/basic.test.js",
     "test:wikipedia": "testcafe chrome ./tests/wikipedia.test.js",
     "test:sauce": "testcafe chrome ./tests/sauce.test.js",
-    "test:headless": "testcafe chrome:headless ./tests"
+    "test:headless": "testcafe chrome:headless ./tests --concurrency 3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "testcafe": "^1.9.4"
+    "testcafe": "^2.6.2"
   }
 }
