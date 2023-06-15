@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:basic": "testcafe chrome ./tests/basic.test.js",
-    "test:mercadolibre": "testcafe chrome ./tests/mercadolibre.test.js",
+    "test:wikipedia": "testcafe chrome ./tests/wikipedia.test.js",
     "test:sauce": "testcafe chrome ./tests/sauce.test.js",
     "test:headless": "testcafe chrome:headless ./tests"
   },
